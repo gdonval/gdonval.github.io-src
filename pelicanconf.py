@@ -19,6 +19,7 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+OUTPUT_RETENTION = [".git"]
 # Blogroll
 #LINKS = (('Pelican', 'http://getpelican.com/'),
 #         ('Python.org', 'http://python.org/'),
@@ -29,8 +30,15 @@ AUTHOR_FEED_RSS = None
 #SOCIAL = (('You can add links in your config file', '#'),
 #          ('Another social link', '#'),)
 
+
+
 DEFAULT_PAGINATION = 10
 
+PLUGIN_PATHS = ["./plugins"]
+PLUGINS = ['assets', 'render_math', 'pelican-cite', 'series', 'neighbors',
+        'pelican-toc', 'section_number', 'share_post', 'sub_parts']
+
+TYPOGRIPHY=True
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
