@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
+TYPOGRIFY=True
 AUTHOR = 'Gaël'
 SITENAME = 'And yet it moves!'
 SITEURL = ''
@@ -38,7 +39,6 @@ PLUGIN_PATHS = ["./plugins"]
 PLUGINS = ['assets', 'render_math', 'pelican-cite', 'series', 'neighbors',
         'pelican-toc', 'section_number', 'share_post', 'sub_parts']
 
-TYPOGRIPHY=True
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
