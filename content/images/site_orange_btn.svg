@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" width="89.19mm" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 316.02792 253.46689" xmlns:cc="http://creativecommons.org/ns#" height="71.53mm" xmlns:dc="http://purl.org/dc/elements/1.1/" version="1.1">
+<defs>
+<linearGradient id="a" gradientTransform="matrix(1 0 0 .8487 -.02723 6.329)" x1="61.25" x2="61.25" y1="34.15" gradientUnits="userSpaceOnUse" y2="22.09">
+<stop stop-color="#f60" offset="0"/>
+<stop stop-color="#ffb380" offset="1"/>
+</linearGradient>
+</defs>
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g transform="translate(304.9 -128.9)">
+<g stroke="#005800">
+<rect x="-304.2" ry="5.081" stroke-width="1.341" width="314.7" fill="#fff" height="252.1" y="129.6"/>
+<g stroke-linecap="round" stroke-linejoin="round">
+<path stroke-width="1.341" fill="#fff" d="m-295.4 154.7 6.435-14.77c1.003-2.304 2.023-4.52 4.535-4.535h115.9c2.513 0.0153 3.532 2.232 4.535 4.535l6.435 14.77z"/>
+<path stroke-width="1.341" fill="#005800" d="m-167 154.7 6.435-14.77c1.003-2.304 2.023-4.52 4.535-4.535h115.9c2.513 0.0153 3.532 2.232 4.535 4.535l6.435 14.77z"/>
+<rect x="-304.3" ry="0" stroke-width=".8202" width="314.4" fill="#005800" height="28.95" y="153.4"/>
+</g>
+</g>
+<g transform="matrix(1.172 0 0 1.172 -61.21 -129.8)">
+<rect x="-155.3" stroke="#005800" width="179.1" stroke-width="1.145" ry="4.169" fill="#fff" height="16.99" y="245.6"/>
+<g stroke-linecap="round" stroke-width="0.7" stroke-linejoin="round" fill="none" stroke="#fff" transform="matrix(1.635 0 0 1.635 -226.4 -353.7)">
+<path d="m36.5 368.3 2.938 3.438h-8.375 8.375l-2.938 3.438"/>
+<path d="m20.01 368.3-2.938 3.438h8.375-8.375l2.938 3.438"/>
+</g>
+</g>
+<g stroke-linecap="round" stroke="#fff" fill="#fff" stroke-linejoin="round" stroke-width="0.7" transform="matrix(1.172 0 0 1.172 -407.2 -101)">
+<rect x="331.8" width="16.5" ry="1.375" height="2.75" y="222.1"/>
+<rect x="331.8" ry="1.375" width="16.5" height="2.75" y="228.1"/>
+<rect x="331.8" width="16.5" ry="1.375" height="2.75" y="234.1"/>
+</g>
+<text x="-12.825623" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-family="sans-serif" font-size="17.58px" fill="#005800" y="147.72362" line-height="125%"><tspan x="-12.825623" y="147.72362">×</tspan></text>
+<text x="381.66089" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-family="sans-serif" font-size="15px" fill="#000000" y="342.25021" line-height="125%"><tspan x="381.66089" y="342.25021"/></text>
+<g transform="matrix(1.002 0 0 1.002 -745.6 -87.98)">
+<path stroke-linecap="round" stroke="#000" stroke-width="0.4" fill="#3e4c71" stroke-linejoin="round" d="m502.5 287.9c-0.8302-0.1552 0.0657-0.6738 0.2308-1.039 2.247-1.532 4.519-2.999 8.437-0.1531 0.1922 0.4088 1.604 0.9919 0.3327 1.192v7.375h-9z"/>
+<path fill="none" stroke="#000" d="m502.5 287.8c3.745-1.865 6.502-1.112 9.082 0.1105" stroke-width="0.4"/>
+<g>
+<path stroke-linecap="round" stroke="#000" stroke-width=".1" fill="#f5f5d1" stroke-linejoin="round" d="m503 288.4c1.852-1.16 3.306-1.088 4.75-0.9844v6.687l-4.75 0.4688z"/>
+<path stroke-linecap="round" stroke="#000" stroke-width=".1" fill="#f5f5d1" stroke-linejoin="round" d="m508.8 287.6c0.8367 0.1859 1.748 0.2235 2.391 0.7969v5.406l-2.422 0.2344z"/>
+<path fill="#1c3456" d="m466.2 299.9 54.33-8.045 0.0371 7.251-54.32 6.77z"/>
+<path d="m520.5 291.8 24.2 14.59 0.0808 4.825-24.24-12.17z"/>
+<path fill="#000002" d="m521.8 297.4 26.68 15.14-0.0442 3.137-26.6-13.66z"/>
+<path d="m523.4 301.3 29.2 15.71-0.3536 111.7-28.2 10.61z"/>
+<path fill="#1a2f4b" d="m461.7 305.8 60.16-8.466 0.0322 4.62-60.24 8.088z"/>
+<path fill="#30527d" d="m457.3 310.3 66.08-8.996 0.6509 138-67.43-6.91z"/>
+<path stroke-linecap="round" stroke="#000" stroke-width="0.4" fill="#2f4f78" stroke-linejoin="round" d="m490.9 318.5 26.34-2.812v123.8l-26.34-2.5z"/>
+<path stroke-linecap="round" stroke="#000" stroke-width="0.4" fill="#2f4f78" stroke-linejoin="round" d="m465.2 321 22.38-2.188v117.3l-22.38-2.188z"/>
+<path fill="#11161c" d="m452.7 434.1 72.91 8.531v4.066l-72.91-8.927z"/>
+<path fill="#11161c" d="m555.9 429.7-30.26 12.93v4.066l30.26-13.31z"/>
+<path fill="#172736" d="m456.9 432.1 67.01 6.922 1.648 3.692-72.89-8.673z"/>
+<path fill="#020202" d="m551.9 428.6-27.99 10.43 1.648 3.692 30.28-12.9z"/>
+<path stroke-linecap="round" stroke="#000" stroke-width="0.6" fill="#58759d" stroke-linejoin="round" d="m469.4 351.2 16-0.9281v22.55l-16 0.7071z"/>
+<path fill="#e3e2db" d="m470.8 353.2 13.08-0.9281v18.61l-13.08 0.2652z"/>
+<path d="m459.9 311.3 57.89-7.226v6.887l-57.89 6.751z"/>
+<path d="m527.5 304.9 23.6 13.52v4.552l-23.6-11.38z"/>
+</g>
+<g stroke-linecap="round" fill="#58759d" stroke="#000" stroke-linejoin="round" stroke-width="0.6">
+<path d="m494.7 349.8 17.95-1.149v23.96l-17.95 0.3094z"/>
+<path d="m494.7 378.4 17.92-0.149v23.62l-17.92-0.6594z"/>
+<path d="m494.8 407.2 17.7 0.726v23.46l-17.7-1.503z"/>
+<path d="m469.3 378 16.11 0.0697v22.5l-16.11-0.6906z"/>
+<path d="m469.4 405.4 16.02 0.7532v22.28l-16.02-0.8116z"/>
+</g>
+<g fill="#fdfffe">
+<path d="m470.4 324.9 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m475.6 324.4 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m480.8 324 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m470.3 335.6 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m475.5 335.1 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m480.7 334.7 4.419-0.375v9.771l-4.419 0.2812z"/>
+<g transform="matrix(1.134 0 0 1.062 -60.84 -22.66)">
+<path d="m490.4 324.9 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m495.6 324.4 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m500.8 324 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m490.3 335.6 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m495.5 335.1 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m500.7 334.7 4.419-0.375v9.771l-4.419 0.2812z"/>
+</g>
+<g transform="matrix(.4555 .2758 0 .9724 303.3 -129.2)">
+<path d="m490.4 324.9 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m495.6 324.4 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m500.8 324 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m490.3 335.6 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m495.5 335.1 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m500.7 334.7 4.419-0.375v9.771l-4.419 0.2812z"/>
+</g>
+<g transform="matrix(.4555 .2743 0 .9670 315.3 -122.1)">
+<path d="m490.4 324.9 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m495.6 324.4 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m500.8 324 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m490.3 335.6 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m495.5 335.1 4.419-0.375v9.771l-4.419 0.2812z"/>
+<path d="m500.7 334.7 4.419-0.375v9.771l-4.419 0.2812z"/>
+</g>
+</g>
+<g>
+<g fill="#f6f8f6" transform="matrix(.4546 -.03020 0 .7666 298.9 109.4)">
+<g fill="#f6f8f6" font-family="sans-serif" transform="matrix(.3083 .1053 0 .4039 321.8 86.75)">
+<text x="608.11182" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-size="15px" y="329.69907" line-height="125%"><tspan x="608.11182" y="329.69907">POLICE</tspan></text>
+<text x="562.06213" xml:space="preserve" style="word-spacing:0px;text-align:center;text-anchor:middle;letter-spacing:0px" font-size="7.985px" y="396.01776" line-height="82.99999833%" transform="scale(1.223 .8179)"><tspan x="562.06213" y="396.01776">PUBLIC</tspan><tspan x="562.06213" y="402.64517">CALL</tspan></text>
+<text x="712.58691" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-size="15px" y="329.69907" line-height="125%"><tspan x="712.58691" fill="#f6f8f6" y="329.69907" font-size="13.75px">BOX</tspan></text>
+</g>
+</g>
+<g fill="#f6f8f6" font-family="sans-serif" transform="matrix(.2949 -.03885 0 .2949 287.7 241.9)">
+<text x="608.11182" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-size="15px" y="329.69907" line-height="125%"><tspan x="608.11182" y="329.69907">POLICE</tspan></text>
+<text x="562.06213" xml:space="preserve" style="word-spacing:0px;text-align:center;text-anchor:middle;letter-spacing:0px" font-size="7.985px" y="396.01776" line-height="82.99999833%" transform="scale(1.223 .8179)"><tspan x="562.06213" y="396.01776">PUBLIC</tspan><tspan x="562.06213" y="402.64517">CALL</tspan></text>
+<text x="712.58691" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-size="15px" y="329.69907" line-height="125%"><tspan x="712.58691" fill="#f6f8f6" y="329.69907" font-size="16.95px">BOX</tspan></text>
+</g>
+<ellipse cy="375.8" rx=".9060" fill="#a8ac9c" ry="1.149" cx="492.6"/>
+</g>
+</g>
+<text x="616.8125" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-family="sans-serif" font-size="7.5px" fill="#000000" y="355.17471" line-height="125%"><tspan x="616.8125" y="355.17471"/></text>
+<text x="-219.64771" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-family="sans-serif" font-size="5px" fill="#000000" y="171.79799" line-height="125%"><tspan x="-219.64771" font-family="&apos;Source Sans Pro&apos;" y="171.79799" font-size="15px">https://cadabra.org</tspan></text>
+<g transform="translate(17.5 -77.02)">
+<rect x="-253.4" width="7.875" fill="#aaaaa0" height="5.75" y="243.9" ry="0"/>
+<ellipse stroke-linecap="round" cy="243.8" stroke="#aaaaa0" ry="2.938" stroke-width="1.2" rx="2.125" fill="none" cx="-249.4" stroke-linejoin="round"/>
+</g>
+<text x="-47.815655" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-family="sans-serif" font-size="9.76px" fill="#ffffff" y="144.65475" line-height="125%"><tspan x="-47.815655" y="144.65475">×</tspan></text>
+<text x="-177.81566" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-family="sans-serif" font-size="9.76px" fill="#005800" y="144.65475" line-height="125%"><tspan x="-177.81566" y="144.65475">×</tspan></text>
+<g font-family="sans-serif" fill="#000000">
+<text x="-174.30182" xml:space="preserve" font-style="italic" style="word-spacing:0px;letter-spacing:0px" font-size="20px" y="220.80463" line-height="125%" font-weight="bold"><tspan x="-174.30182" font-family="sans-serif" font-style="italic" y="220.80463" font-weight="bold" font-size="20px">Dartis</tspan></text>
+<text x="-175.01715" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-size="5px" y="234.86221" line-height="125%"><tspan x="-175.01715" y="234.86221" font-size="12.5px">by <tspan font-size="12.5px" fill="#0088aa">Dr. How</tspan></tspan></text>
+<flowRoot font-size="5px" line-height="125%" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" transform="translate(-4.5,8.5)"><flowRegion><rect width="173" x="-170" y="254.1" height="65.75"/></flowRegion><flowPara font-size="7.5px">The <flowSpan font-style="italic" font-family="sans-serif">Dartis</flowSpan> is a scalable <flowSpan font-style="italic" font-family="sans-serif">plateform-as-a-service</flowSpan> tool dedicated to proactive opimizing all the variants of your business-enabling services through quantized non-causal time dynamicity. It makes an intensive use of a disruptive hybrid cloud technology to handle the <flowSpan font-style="italic" font-family="sans-serif">Big Data</flowSpan> gathered on each timeline. </flowPara></flowRoot>
+</g>
+<g stroke-linecap="round" fill="#005800" stroke="#007c00" stroke-linejoin="round" stroke-width=".3968" transform="translate(-28.19 45.75)">
+<path d="m-140 204.1-2.105-1.165-2.153 1.074 0.4572-2.362-1.687-1.716 2.388-0.2951 1.111-2.134 1.019 2.18 2.373 0.3967-1.758 1.642z"/>
+<path d="m-132 204.1-2.105-1.165-2.153 1.074 0.4572-2.362-1.687-1.716 2.388-0.2951 1.111-2.134 1.019 2.18 2.373 0.3967-1.758 1.642z"/>
+<path d="m-124 204.1-2.105-1.165-2.153 1.074 0.4572-2.362-1.687-1.716 2.388-0.2951 1.111-2.134 1.019 2.18 2.373 0.3967-1.758 1.642z"/>
+<path d="m-116 204.1-2.105-1.165-2.153 1.074 0.4572-2.362-1.687-1.716 2.388-0.2951 1.111-2.134 1.019 2.18 2.373 0.3967-1.758 1.642z"/>
+<path d="m-108 204.1-2.105-1.165-2.153 1.074 0.4572-2.362-1.687-1.716 2.388-0.2951 1.111-2.134 1.019 2.18 2.373 0.3967-1.758 1.642z"/>
+</g>
+<g transform="translate(-144.1 314.2)">
+<rect x="15.12" ry="2.652" fill="url(#a)" height="15.54" y="26.18" width="78.22" stroke="#bd5800" stroke-width=".4608"/>
+<text x="20.069857" font-family="sans-serif" line-height="125%" fill="#4d4d4d" y="40.7243" xml:space="preserve" style="word-spacing:0px;letter-spacing:0px" font-size="13.82px" transform="scale(1.086 .921)"><tspan x="20.069857" font-family="Cantarell" fill="#4d4d4d" y="40.7243" font-size="13.82px">Buy Now!</tspan></text>
+</g>
+</g>
+</svg>
