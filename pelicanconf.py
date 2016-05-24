@@ -10,6 +10,7 @@ SITEURL = ''
 PATH = 'content'
 
 TIMEZONE = 'Europe/London'
+THEME = "./themes/notmyidea_mod"
 
 DEFAULT_LANG = 'en'
 
