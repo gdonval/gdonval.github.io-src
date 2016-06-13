@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block head %}
+<meta name="keywords" content="{{ article.tags|join(', ')  }}">
+{% endblock %}
+
+{% block title %}&ndash; {{ article.title }}{% endblock %}
+
+{% block content %}
+<article>
+  {% if article.series %}
+    {% if article.series.previous %}
+      <div class="series_links">
+        <a style="float: left;" href='{{ SITEURL }}/{{ article.series.all[0].url }}'>
+            &lt;&lt; First article of the series
+        </a>
+      </div>
+    {% endif %}
+  {% endif %}
+  <div class="article_meta">
+    <p style="text-align: right; margin: 0;">Posted on: {{ article.locale_date }}</p>
+  </div>
+  <div class="article_title">
+    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+  </div>
+  <div class="article_text">
+    {{ article.content }}
+  </div>
+  {% if article.series %}
+    {% if article.series.previous %}
+      <div class="series_links">
+        <a style="float: left;" href='{{ SITEURL }}/{{ article.series.previous.url }}'>
+            &lt; Part {{  article.series.index - 1 }}: {{
+            article.series.previous.title }}
+        </a>
+      </div>
+    {% endif %}
+    {% if article.series.next %}
+    <div class="series_links">
+        <a style="float: right;" href='{{ SITEURL }}/{{ article.series.next.url }}'>
+            Part {{  article.series.index + 1 }}: {{ article.series.next.title }} &gt;
+        </a>
+    </div>
+    {% endif %}
+    <div style="clear: both;"></div>
+  {% endif %}
+</article>
+{% endblock %}
