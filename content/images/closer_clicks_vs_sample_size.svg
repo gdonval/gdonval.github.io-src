@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
-<svg viewBox="0 0 504 216" xmlns="http://www.w3.org/2000/svg" version="1.1" width="504pt" height="216pt" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg height="216pt" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 504 216" width="504pt" xmlns="http://www.w3.org/2000/svg" version="1.1">
 <defs>
 <style type="text/css">*{stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:100000;}</style>
 </defs>
@@ -9,54 +9,54 @@
 <defs>
 <path id="b" stroke="#262626" d="m0 0"/>
 </defs>
-<use xlink:href="#b" x="134.760121951" stroke="#262626" y="169.1925" fill="#262626"/>
-<use xlink:href="#b" x="134.760121951" stroke="#262626" y="14.04" fill="#262626"/>
+<use stroke="#262626" x="134.760121951" y="169.1925" xlink:href="#b" fill="#262626"/>
+<use stroke="#262626" x="134.760121951" y="14.04" xlink:href="#b" fill="#262626"/>
 <defs>
 <path id="i" d="m43.8 68.09l-0.89 0.71c-1.61-2.1-2.5-2.6-4.82-2.6h-20.68l-10.91-23.7s-0.094-0.3-0.094-0.5c0-0.59 0.297-0.8 1.188-0.8 9.606 0 16.61-3.2 21.32-7 4.5-3.61 6.68-8.61 6.68-15 0-8.61-6.5-16.9-13.5-16.9-2-0.003-4.29 0.903-7.09 3.2-3.2 2.594-5.094 3.094-7.406 3.094-2.797 0-4.5-1.297-4.5-3.797 0-3.797 5.203-6.203 12.71-6.203 6.79 0 12.29 1.5 17 4.906 6.79 5 9.79 11.2 9.79 20.8 0 5.29-0.89 9.11-3.5 12.7-5.68 7.91-10.68 10.09-25 12.8l4 8.5h19.41c1.59 0 2.41 0.61 2.7 1.29z"/>
 <path id="a" d="m47.59 33c0 20.5-9.09 34.59-22.18 34.59-16.11 0-23-16.29-23-34-0.004-16.39 5.496-35 22.59-35 16.3 0.004 22.59 17.21 22.59 34.41m-9.59-0.5c0-19.8-4.5-31.3-13-31.3-8.59 0.003-13 11.39-13 31.71 0 20.29 4.5 32.09 12.8 32.09 8.79 0 13.2-11.7 13.2-32.5"/>
 </defs>
 <g transform="translate(127.3 183) scale(.1 -.1)" fill="#262626">
 <use xlink:href="#i"/>
-<use xlink:href="#a" x="49.99998474121094"/>
-<use xlink:href="#a" x="99.99996948242188"/>
+<use x="49.99998474121094" xlink:href="#a"/>
+<use x="99.99996948242188" xlink:href="#a"/>
 </g>
-<use xlink:href="#b" x="221.055091463" stroke="#262626" y="169.1925" fill="#262626"/>
-<use xlink:href="#b" x="221.055091463" stroke="#262626" y="14.04" fill="#262626"/>
+<use stroke="#262626" x="221.055091463" y="169.1925" xlink:href="#b" fill="#262626"/>
+<use stroke="#262626" x="221.055091463" y="14.04" xlink:href="#b" fill="#262626"/>
 <defs>
 <path id="j" d="m39.41 0v1.5c-7.5 0-9.5 1.797-9.5 6.094v59.71l-0.91 0.29-17.91-9.09v-1.41l2.71 1c1.79 0.71 3.5 1.21 4.5 1.21 2.11 0 3-1.5 3-4.89v-44.91c0-5.5-2.1-7.594-9.5-8v-1.5z"/>
 </defs>
 <g transform="translate(211.1 183) scale(.1 -.1)" fill="#262626">
 <use xlink:href="#j"/>
-<use xlink:href="#a" x="49.99998474121094"/>
-<use xlink:href="#a" x="99.99996948242188"/>
-<use xlink:href="#a" x="149.9999542236328"/>
+<use x="49.99998474121094" xlink:href="#a"/>
+<use x="99.99996948242188" xlink:href="#a"/>
+<use x="149.9999542236328" xlink:href="#a"/>
 </g>
-<use xlink:href="#b" x="307.350060976" stroke="#262626" y="169.1925" fill="#262626"/>
-<use xlink:href="#b" x="307.350060976" stroke="#262626" y="14.04" fill="#262626"/>
+<use stroke="#262626" x="307.350060976" y="169.1925" xlink:href="#b" fill="#262626"/>
+<use stroke="#262626" x="307.350060976" y="14.04" xlink:href="#b" fill="#262626"/>
 <g transform="translate(297.4 183) scale(.1 -.1)" fill="#262626">
 <use xlink:href="#j"/>
-<use xlink:href="#i" x="49.99998474121094"/>
-<use xlink:href="#a" x="99.99996948242188"/>
-<use xlink:href="#a" x="149.9999542236328"/>
+<use x="49.99998474121094" xlink:href="#i"/>
+<use x="99.99996948242188" xlink:href="#a"/>
+<use x="149.9999542236328" xlink:href="#a"/>
 </g>
-<use xlink:href="#b" x="393.645030488" stroke="#262626" y="169.1925" fill="#262626"/>
-<use xlink:href="#b" x="393.645030488" stroke="#262626" y="14.04" fill="#262626"/>
+<use stroke="#262626" x="393.645030488" y="169.1925" xlink:href="#b" fill="#262626"/>
+<use stroke="#262626" x="393.645030488" y="14.04" xlink:href="#b" fill="#262626"/>
 <defs>
 <path id="o" d="m47.41 13.7l-1.41 0.6c-3.3-5.597-5.41-6.706-9.59-6.706h-23.41l16.5 17.61c8.91 9.39 12.8 16.89 12.8 24.8 0 9.91-7.21 17.59-18.5 17.59-12.3 0-18.71-8.18-20.8-19.89l2.094-0.5c4 9.8 7.496 13 14.71 13 8.5 0 13.9-5 13.9-14.11 0-8.5-3.61-16.09-13-26l-17.79-18.89-0.004-1.2h39.09z"/>
 </defs>
 <g transform="translate(383.6 183) scale(.1 -.1)" fill="#262626">
 <use xlink:href="#o"/>
-<use xlink:href="#a" x="49.99998474121094"/>
-<use xlink:href="#a" x="99.99996948242188"/>
-<use xlink:href="#a" x="149.9999542236328"/>
+<use x="49.99998474121094" xlink:href="#a"/>
+<use x="99.99996948242188" xlink:href="#a"/>
+<use x="149.9999542236328" xlink:href="#a"/>
 </g>
-<use xlink:href="#b" x="479.94" stroke="#262626" y="169.1925" fill="#262626"/>
-<use xlink:href="#b" x="479.94" stroke="#262626" y="14.04" fill="#262626"/>
+<use stroke="#262626" x="479.94" y="169.1925" xlink:href="#b" fill="#262626"/>
+<use stroke="#262626" x="479.94" y="14.04" xlink:href="#b" fill="#262626"/>
 <g transform="translate(469.9 183) scale(.1 -.1)" fill="#262626">
 <use xlink:href="#o"/>
-<use xlink:href="#i" x="49.99998474121094"/>
-<use xlink:href="#a" x="99.99996948242188"/>
-<use xlink:href="#a" x="149.9999542236328"/>
+<use x="49.99998474121094" xlink:href="#i"/>
+<use x="99.99996948242188" xlink:href="#a"/>
+<use x="149.9999542236328" xlink:href="#a"/>
 </g>
 <defs>
 <path id="v" d="m18 63.2c0 2.8-2.2 5.1-5.09 5.1-2.82 0-5.113-2.3-5.113-5.1 0-2.9 2.203-5.11 5.003-5.11 3 0 5.2 2.21 5.2 5.11m7.3-63.2v1.5c-6.6 0.5-7.39 1.594-7.39 9v35.09l-0.41 0.41-15.5-5.5v-1.59c1.797 0.5 3.297 0.5 4.203 0.5 2.5 0 3.297-1.61 3.297-6.32v-22.68c0-7.613-1-8.504-7.906-8.91v-1.5z"/>
@@ -71,36 +71,36 @@
 </defs>
 <g transform="translate(236.4 199.1) scale(.13 -.13)" fill="#262626">
 <use xlink:href="#aq"/>
-<use xlink:href="#h" x="55.59999084472656"/>
-<use xlink:href="#al" x="99.99998474121094"/>
-<use xlink:href="#s" x="177.7999725341797"/>
-<use xlink:href="#u" x="227.79995727539062"/>
-<use xlink:href="#c" x="255.59994506835938"/>
-<use xlink:href="#XITS-20" x="299.99993896484375"/>
-<use xlink:href="#g" x="324.9999237060547"/>
-<use xlink:href="#v" x="363.89991760253906"/>
-<use xlink:href="#aj" x="391.6999053955078"/>
-<use xlink:href="#c" x="436.0998992919922"/>
+<use x="55.59999084472656" xlink:href="#h"/>
+<use x="99.99998474121094" xlink:href="#al"/>
+<use x="177.7999725341797" xlink:href="#s"/>
+<use x="227.79995727539062" xlink:href="#u"/>
+<use x="255.59994506835938" xlink:href="#c"/>
+<use x="299.99993896484375" xlink:href="#XITS-20"/>
+<use x="324.9999237060547" xlink:href="#g"/>
+<use x="363.89991760253906" xlink:href="#v"/>
+<use x="391.6999053955078" xlink:href="#aj"/>
+<use x="436.0998992919922" xlink:href="#c"/>
 </g>
-<use xlink:href="#b" x="55.36875" stroke="#262626" y="123.559411765" fill="#262626"/>
-<use xlink:href="#b" x="479.94" stroke="#262626" y="123.559411765" fill="#262626"/>
+<use stroke="#262626" x="55.36875" y="123.559411765" xlink:href="#b" fill="#262626"/>
+<use stroke="#262626" x="479.94" y="123.559411765" xlink:href="#b" fill="#262626"/>
 <defs>
 <path id="at" d="m47.3 16.7v6.39h-10.3v44.5h-4.41l-31.39-44.5 0.003-6.39h28v-16.7h7.8v16.7zm-18.1 6.39h-24l24 34.32z"/>
 <path id="af" d="m18.09 4.297c0 3-2.59 5.703-5.5 5.703-3.09 0-5.59-2.5-5.59-5.594 0-3.109 2.406-5.5 5.5-5.5 3 0 5.59 2.5 5.59 5.391"/>
 </defs>
 <g transform="translate(30.87 125.9) scale(.1 -.1)" fill="#262626">
 <use xlink:href="#a"/>
-<use xlink:href="#af" x="49.99998474121094"/>
-<use xlink:href="#j" x="74.99996948242188"/>
-<use xlink:href="#at" x="124.99995422363281"/>
+<use x="49.99998474121094" xlink:href="#af"/>
+<use x="74.99996948242188" xlink:href="#j"/>
+<use x="124.99995422363281" xlink:href="#at"/>
 </g>
-<use xlink:href="#b" x="55.36875" stroke="#262626" y="32.2932352941" fill="#262626"/>
-<use xlink:href="#b" x="479.94" stroke="#262626" y="32.2932352941" fill="#262626"/>
+<use stroke="#262626" x="55.36875" y="32.2932352941" xlink:href="#b" fill="#262626"/>
+<use stroke="#262626" x="479.94" y="32.2932352941" xlink:href="#b" fill="#262626"/>
 <g transform="translate(30.87 34.62) scale(.1 -.1)" fill="#262626">
 <use xlink:href="#a"/>
-<use xlink:href="#af" x="49.99998474121094"/>
-<use xlink:href="#j" x="74.99996948242188"/>
-<use xlink:href="#i" x="124.99995422363281"/>
+<use x="49.99998474121094" xlink:href="#af"/>
+<use x="74.99996948242188" xlink:href="#j"/>
+<use x="124.99995422363281" xlink:href="#i"/>
 </g>
 <defs>
 <path id="f" d="m16 45.8l-0.5 0.2c-5.3-2.09-8.906-3.5-14.8-5.41l0.0031-1.59c1.391 0.3 2.297 0.41 3.5 0.41 2.5 0 3.391-1.61 3.391-6v-25c0-5.004-0.688-5.707-7.094-6.91v-1.5h24v1.5c-6.8 0.297-8.5 1.797-8.5 7.5v22.5c0 3.2 4.2 8.2 7 8.2 0.59 0 1.5-0.5 2.59-1.5 1.61-1.5 2.71-2 4-2 2.41 0 3.91 1.71 3.91 4.5 0 3.3-2.09 5.3-5.5 5.3-4.2 0-7-2.2-12-9.41z"/>
@@ -116,55 +116,55 @@
 </defs>
 <g transform="translate(23.04 153.4) rotate(-90) scale(.13 -.13)" fill="#262626">
 <use xlink:href="#ap"/>
-<use xlink:href="#l" x="61.09999084472656"/>
-<use xlink:href="#d" x="111.0999755859375"/>
-<use xlink:href="#h" x="138.89996337890625"/>
-<use xlink:href="#u" x="183.29995727539062"/>
-<use xlink:href="#XITS-20" x="211.09994506835938"/>
-<use xlink:href="#aa" x="236.0999298095703"/>
-<use xlink:href="#u" x="280.4999237060547"/>
-<use xlink:href="#v" x="308.29991149902344"/>
-<use xlink:href="#aa" x="336.0998992919922"/>
-<use xlink:href="#am" x="380.49989318847656"/>
-<use xlink:href="#p" x="430.4998779296875"/>
-<use xlink:href="#d" x="463.79986572265625"/>
-<use xlink:href="#z" x="491.599853515625"/>
-<use xlink:href="#f" x="541.5998382568359"/>
-<use xlink:href="#l" x="574.8998260498047"/>
-<use xlink:href="#ak" x="624.8998107910156"/>
-<use xlink:href="#w" x="674.8997955322266"/>
-<use xlink:href="#z" x="724.8997802734375"/>
-<use xlink:href="#XITS-20" x="774.8997650146484"/>
-<use xlink:href="#f" x="799.8997497558594"/>
-<use xlink:href="#h" x="833.1997375488281"/>
-<use xlink:href="#d" x="877.5997314453125"/>
-<use xlink:href="#c" x="905.3997192382812"/>
+<use x="61.09999084472656" xlink:href="#l"/>
+<use x="111.0999755859375" xlink:href="#d"/>
+<use x="138.89996337890625" xlink:href="#h"/>
+<use x="183.29995727539062" xlink:href="#u"/>
+<use x="211.09994506835938" xlink:href="#XITS-20"/>
+<use x="236.0999298095703" xlink:href="#aa"/>
+<use x="280.4999237060547" xlink:href="#u"/>
+<use x="308.29991149902344" xlink:href="#v"/>
+<use x="336.0998992919922" xlink:href="#aa"/>
+<use x="380.49989318847656" xlink:href="#am"/>
+<use x="430.4998779296875" xlink:href="#p"/>
+<use x="463.79986572265625" xlink:href="#d"/>
+<use x="491.599853515625" xlink:href="#z"/>
+<use x="541.5998382568359" xlink:href="#f"/>
+<use x="574.8998260498047" xlink:href="#l"/>
+<use x="624.8998107910156" xlink:href="#ak"/>
+<use x="674.8997955322266" xlink:href="#w"/>
+<use x="724.8997802734375" xlink:href="#z"/>
+<use x="774.8997650146484" xlink:href="#XITS-20"/>
+<use x="799.8997497558594" xlink:href="#f"/>
+<use x="833.1997375488281" xlink:href="#h"/>
+<use x="877.5997314453125" xlink:href="#d"/>
+<use x="905.3997192382812" xlink:href="#c"/>
 </g>
 <defs>
 <path id="ag" stroke="#ebebeb" stroke-width=".3" d="m55.37-33.22v-11.83l1.55-8.17 2.07-9.78 2.59-6.56 3.11-13.66 3.8-9.42 4.83-11.56 6.04-10.5 7.42-13.7 9.15-11.2 11.17-6 14.2-9.4 17.4-6.3 21.6-6 26.8-2.9 33.1-0.2 41.1 1.4 50.9 3.4 63 3.7 78.2 4.3 96.6 6.6v1.3l-96.6-6.6-78.2-4.3-63-3.4-50.9-3-41.1-0.8-33.1 0.7-26.8 3.8-21.6 7-17.4 7.4-14.2 10.3-11.17 6.6-9.15 12.1-7.42 14.4-6.04 11.07-4.83 12.09-3.8 9.82-3.11 14.09-2.59 6.7-2.07 10.14-1.55 8.37z"/>
 </defs>
 <g clip-path="url(#e)">
-<use xlink:href="#ag" x="0.0" stroke-width=".3" stroke="#ebebeb" y="216.0" fill="#ebebeb"/>
+<use stroke-width=".3" stroke="#ebebeb" x="0.0" y="216.0" xlink:href="#ag" fill="#ebebeb"/>
 </g>
 <defs>
 <path id="ah" stroke="#ebebeb" stroke-width=".3" d="m55.37-21.37v-12.04l1.55-13.52 2.07-1.21 2.59-6.09 3.11-12.94 3.8-1.8 4.83-10.58 6.04-10.15 7.42-8.61 9.15-8.59 11.17-10.3 14.2-12.1 17.4-8.3 21.6-5.4 26.8-8.7 33.1-6.3 41.1-3.8 50.9-7.3 63-1.7 78.2-2.7 96.6-0.6v2.7l-96.6 1-78.2 3.5-63 2.3-50.9 8.3-41.1 4.3-33.1 6.9-26.8 9.6-21.6 5.8-17.4 8.9-14.2 12.7-11.17 10.94-9.15 8.97-7.42 8.94-6.04 10.52-4.83 10.94-3.8 1.89-3.11 13.31-2.59 6.17-2.07 1.27-1.55 13.78z"/>
 </defs>
 <g clip-path="url(#e)">
-<use xlink:href="#ah" x="0.0" stroke-width=".3" stroke="#ebebeb" y="216.0" fill="#ebebeb"/>
+<use stroke-width=".3" stroke="#ebebeb" x="0.0" y="216.0" xlink:href="#ah" fill="#ebebeb"/>
 </g>
 <defs>
 <path id="ai" stroke="#ebebeb" stroke-width=".3" d="m55.37-155.8v-1.4h1.55 2.07 2.59 3.11 3.8 4.83 6.04 7.42 9.15 11.17 14.2 17.4 21.6 26.8 33.1 41.1 50.9 63 78.2 96.6v1.4h-96.6-78.2-63-50.9-41.1-33.1-26.8-21.6-17.4-14.2-11.17-9.15-7.42-6.04-4.83-3.8-3.11-2.59-2.07-1.55z"/>
 </defs>
 <g clip-path="url(#e)">
-<use xlink:href="#ai" x="0.0" stroke-width=".3" stroke="#ebebeb" y="216.0" fill="#ebebeb"/>
+<use stroke-width=".3" stroke="#ebebeb" x="0.0" y="216.0" xlink:href="#ai" fill="#ebebeb"/>
 </g>
-<path fill="none" clip-path="url(#e)" d="m55.37 59.47h424.5" stroke-width="1.5" stroke="#ccb974" stroke-dasharray="6.000000,6.000000"/>
-<path clip-path="url(#e)" stroke-width="1.5" d="m55.37 176.9l1.55-8.3 2.07-10 2.59-6.6 3.11-13.9 3.8-9.6 4.83-11.8 6.04-10.8 7.42-14.05 9.15-11.66 11.17-6.28 14.2-9.88 17.4-6.83 21.6-6.49 26.8-3.37 33.1-0.45 41.1 1.1 50.9 3.23 63 3.51 78.2 4.34 51.6 3.53" stroke-linecap="round" stroke="#4c72b0" fill="none"/>
-<path clip-path="url(#e)" stroke-width="1.5" d="m55.37 188.6l1.55-13.6 2.07-1.3 2.59-6.1 3.11-13.1 3.8-1.9 4.83-10.7 6.04-10.4 7.42-8.7 9.15-8.8 11.17-10.6 14.2-12.44 17.4-8.63 21.6-5.58 26.8-9.11 33.1-6.66 41.1-4 50.9-7.83 63-1.96 78.2-3.12 51.6-0.42" stroke-linecap="round" stroke="#55a868" fill="none"/>
-<path stroke-linecap="square" d="m479.9 169.2v-155.2" stroke="#a6a6a6" fill="none"/>
-<path stroke-linecap="square" d="m55.37 14.04h424.5" stroke="#a6a6a6" fill="none"/>
-<path stroke-linecap="square" d="m55.37 169.2v-155.2" stroke="#a6a6a6" fill="none"/>
-<path stroke-linecap="square" d="m55.37 169.2h424.5" stroke="#a6a6a6" fill="none"/>
+<path clip-path="url(#e)" stroke-width="1.5" d="m55.37 59.47h424.5" stroke="#ccb974" stroke-dasharray="6.000000,6.000000" fill="none"/>
+<path clip-path="url(#e)" stroke-width="1.5" d="m55.37 176.9l1.55-8.3 2.07-10 2.59-6.6 3.11-13.9 3.8-9.6 4.83-11.8 6.04-10.8 7.42-14.05 9.15-11.66 11.17-6.28 14.2-9.88 17.4-6.83 21.6-6.49 26.8-3.37 33.1-0.45 41.1 1.1 50.9 3.23 63 3.51 78.2 4.34 51.6 3.53" stroke="#4c72b0" stroke-linecap="round" fill="none"/>
+<path clip-path="url(#e)" stroke-width="1.5" d="m55.37 188.6l1.55-13.6 2.07-1.3 2.59-6.1 3.11-13.1 3.8-1.9 4.83-10.7 6.04-10.4 7.42-8.7 9.15-8.8 11.17-10.6 14.2-12.44 17.4-8.63 21.6-5.58 26.8-9.11 33.1-6.66 41.1-4 50.9-7.83 63-1.96 78.2-3.12 51.6-0.42" stroke="#55a868" stroke-linecap="round" fill="none"/>
+<path d="m479.9 169.2v-155.2" stroke="#a6a6a6" stroke-linecap="square" fill="none"/>
+<path d="m55.37 14.04h424.5" stroke="#a6a6a6" stroke-linecap="square" fill="none"/>
+<path d="m55.37 169.2v-155.2" stroke="#a6a6a6" stroke-linecap="square" fill="none"/>
+<path d="m55.37 169.2h424.5" stroke="#a6a6a6" stroke-linecap="square" fill="none"/>
 <defs>
 <path id="ao" d="m15.3 68.09l-0.5 0.21c-4.21-1.5-6.8-2.1-11.5-3.5l-3.003-0.89-0.0001-1.71c0.5 0.1 1 0.21 1.703 0.21 4.094 0 4.906-0.82 4.906-5.82v-51c0-3.387 8.394-6.59 16.5-6.59 13.18 0 23.39 10.2 23.39 25 0 12.41-7.3 22-18 22-6.1 0-11.39-3.3-13.5-8.41zm0-36.29c0 4.2 4.61 7.9 9.9 7.9 3.6 0 6.8-1.7 8.89-4.7 2.5-3.5 3.91-9.3 3.91-15.3 0-5.79-1.3-10.2-3.7-13.2-2.21-2.797-5.39-4.297-9.3-4.297-5.2 0-9.7 2-9.7 5.203z"/>
 <path id="n" d="m70.7 0v1.906c-5.2 0.594-6.61 2.688-9.4 9.184l-24.6 56.32h-2l-20.61-48.82c-5.887-14-6.793-16.09-12.59-16.68v-1.91h19.91v1.906c-4.82 0-7 1-7 4.094 0 1.203 0.39 2.906 0.89 4.2l4.61 11.39h26.18l4.11-9.39c1.21-2.794 1.89-5.497 1.89-6.997 0-0.906-0.59-2-1.39-2.406-1.2-0.703-1.9-0.891-5.5-0.891v-1.906zm-26 25.7h-23.11l11.5 27.5z"/>
@@ -183,116 +183,116 @@
 </defs>
 <g transform="translate(55.37 11.87) scale(.1 -.1)" fill="#a6a6a6">
 <use xlink:href="#ab"/>
-<use xlink:href="#r" x="55.69999694824219"/>
-<use xlink:href="#ac" x="88.99998474121094"/>
-<use xlink:href="#k" x="161.19996643066406"/>
-<use xlink:href="#n" x="181.199951171875"/>
-<use xlink:href="#q" x="253.39993286132812"/>
-<use xlink:href="#XITS-20" x="286.6999206542969"/>
-<use xlink:href="#ae" x="311.6999053955078"/>
-<use xlink:href="#XITS-20" x="380.19989013671875"/>
-<use xlink:href="#j" x="405.1998748779297"/>
-<use xlink:href="#a" x="455.1998596191406"/>
-<use xlink:href="#y" x="505.19984436035156"/>
-<use xlink:href="#XITS-20" x="579.8998260498047"/>
-<use xlink:href="#k" x="604.8998107910156"/>
-<use xlink:href="#XITS-20" x="624.8997955322266"/>
-<use xlink:href="#ab" x="649.8997802734375"/>
-<use xlink:href="#r" x="705.5997772216797"/>
-<use xlink:href="#ac" x="738.8997650146484"/>
-<use xlink:href="#k" x="811.0997467041016"/>
-<use xlink:href="#m" x="831.0997314453125"/>
-<use xlink:href="#q" x="897.7997283935547"/>
-<use xlink:href="#XITS-20" x="931.0997161865234"/>
-<use xlink:href="#ae" x="956.0997009277344"/>
-<use xlink:href="#XITS-20" x="1024.5996856689453"/>
-<use xlink:href="#o" x="1049.5996704101562"/>
-<use xlink:href="#a" x="1099.5996551513672"/>
-<use xlink:href="#y" x="1149.5996398925781"/>
-<use xlink:href="#XITS-20" x="1224.2996215820312"/>
-<use xlink:href="#k" x="1249.2996063232422"/>
-<use xlink:href="#XITS-20" x="1269.2995910644531"/>
-<use xlink:href="#c" x="1294.299575805664"/>
-<use xlink:href="#f" x="1338.6995697021484"/>
-<use xlink:href="#f" x="1371.9995574951172"/>
-<use xlink:href="#l" x="1405.299545288086"/>
-<use xlink:href="#f" x="1455.2995300292969"/>
-<use xlink:href="#XITS-20" x="1488.5995178222656"/>
-<use xlink:href="#ao" x="1513.5995025634766"/>
-<use xlink:href="#h" x="1563.5994873046875"/>
-<use xlink:href="#t" x="1607.9994812011719"/>
-<use xlink:href="#x" x="1657.9994659423828"/>
-<use xlink:href="#g" x="1707.9994506835938"/>
-<use xlink:href="#ar" x="1746.8994445800781"/>
-<use xlink:href="#XITS-20" x="1774.6994323730469"/>
-<use xlink:href="#as" x="1799.6994171142578"/>
-<use xlink:href="#i" x="1849.6994018554688"/>
-<use xlink:href="#y" x="1899.6993865966797"/>
+<use x="55.69999694824219" xlink:href="#r"/>
+<use x="88.99998474121094" xlink:href="#ac"/>
+<use x="161.19996643066406" xlink:href="#k"/>
+<use x="181.199951171875" xlink:href="#n"/>
+<use x="253.39993286132812" xlink:href="#q"/>
+<use x="286.6999206542969" xlink:href="#XITS-20"/>
+<use x="311.6999053955078" xlink:href="#ae"/>
+<use x="380.19989013671875" xlink:href="#XITS-20"/>
+<use x="405.1998748779297" xlink:href="#j"/>
+<use x="455.1998596191406" xlink:href="#a"/>
+<use x="505.19984436035156" xlink:href="#y"/>
+<use x="579.8998260498047" xlink:href="#XITS-20"/>
+<use x="604.8998107910156" xlink:href="#k"/>
+<use x="624.8997955322266" xlink:href="#XITS-20"/>
+<use x="649.8997802734375" xlink:href="#ab"/>
+<use x="705.5997772216797" xlink:href="#r"/>
+<use x="738.8997650146484" xlink:href="#ac"/>
+<use x="811.0997467041016" xlink:href="#k"/>
+<use x="831.0997314453125" xlink:href="#m"/>
+<use x="897.7997283935547" xlink:href="#q"/>
+<use x="931.0997161865234" xlink:href="#XITS-20"/>
+<use x="956.0997009277344" xlink:href="#ae"/>
+<use x="1024.5996856689453" xlink:href="#XITS-20"/>
+<use x="1049.5996704101562" xlink:href="#o"/>
+<use x="1099.5996551513672" xlink:href="#a"/>
+<use x="1149.5996398925781" xlink:href="#y"/>
+<use x="1224.2996215820312" xlink:href="#XITS-20"/>
+<use x="1249.2996063232422" xlink:href="#k"/>
+<use x="1269.2995910644531" xlink:href="#XITS-20"/>
+<use x="1294.299575805664" xlink:href="#c"/>
+<use x="1338.6995697021484" xlink:href="#f"/>
+<use x="1371.9995574951172" xlink:href="#f"/>
+<use x="1405.299545288086" xlink:href="#l"/>
+<use x="1455.2995300292969" xlink:href="#f"/>
+<use x="1488.5995178222656" xlink:href="#XITS-20"/>
+<use x="1513.5995025634766" xlink:href="#ao"/>
+<use x="1563.5994873046875" xlink:href="#h"/>
+<use x="1607.9994812011719" xlink:href="#t"/>
+<use x="1657.9994659423828" xlink:href="#x"/>
+<use x="1707.9994506835938" xlink:href="#g"/>
+<use x="1746.8994445800781" xlink:href="#ar"/>
+<use x="1774.6994323730469" xlink:href="#XITS-20"/>
+<use x="1799.6994171142578" xlink:href="#as"/>
+<use x="1849.6994018554688" xlink:href="#i"/>
+<use x="1899.6993865966797" xlink:href="#y"/>
 </g>
 <defs>
 <path id="au" d="m28.7 67.59h-6.7l-22.91-69 6.816 0.004z"/>
 </defs>
 <g transform="translate(134.8 36.86) scale(.13 -.13)" fill="#4c72b0">
 <use xlink:href="#n"/>
-<use xlink:href="#au" x="72.19998168945312"/>
-<use xlink:href="#m" x="99.99996948242188"/>
-<use xlink:href="#XITS-20" x="166.69996643066406"/>
-<use xlink:href="#d" x="191.699951171875"/>
-<use xlink:href="#c" x="219.49993896484375"/>
-<use xlink:href="#g" x="263.8999328613281"/>
-<use xlink:href="#d" x="302.7999267578125"/>
-<use xlink:href="#v" x="330.59991455078125"/>
-<use xlink:href="#t" x="358.39990234375"/>
-<use xlink:href="#w" x="408.39988708496094"/>
+<use x="72.19998168945312" xlink:href="#au"/>
+<use x="99.99996948242188" xlink:href="#m"/>
+<use x="166.69996643066406" xlink:href="#XITS-20"/>
+<use x="191.699951171875" xlink:href="#d"/>
+<use x="219.49993896484375" xlink:href="#c"/>
+<use x="263.8999328613281" xlink:href="#g"/>
+<use x="302.7999267578125" xlink:href="#d"/>
+<use x="330.59991455078125" xlink:href="#v"/>
+<use x="358.39990234375" xlink:href="#t"/>
+<use x="408.39988708496094" xlink:href="#w"/>
 </g>
 <defs>
 <path id="ad" d="m86.41 0v1.906c-7.32 0.5-8.82 2.188-8.82 9.294v43.8c0 7.5 1.5 9.2 8.71 9.3v1.9h-19.89l-22.11-50.2-23.1 50.2h-19.79l-0.004-1.9c8.188-0.5 9.504-1.8 9.504-9.39v-39.82c0-11.18-1.41-12.59-9.707-13.18v-1.91h23.39v1.906c-7.68 0.391-9.29 2.188-9.29 13.18v39.82l25.2-54.91h1.41l25.5 57.2v-44.9c0-8.3-1.11-9.894-9-10.39v-1.91z"/>
 </defs>
 <g transform="translate(359.1 36.86) scale(.13 -.13)" fill="#55a868">
 <use xlink:href="#ad"/>
-<use xlink:href="#n" x="88.89999389648438"/>
-<use xlink:href="#m" x="161.0999755859375"/>
-<use xlink:href="#XITS-20" x="227.7999725341797"/>
-<use xlink:href="#r" x="252.79995727539062"/>
-<use xlink:href="#o" x="286.0999450683594"/>
-<use xlink:href="#p" x="336.0999298095703"/>
-<use xlink:href="#g" x="369.39991760253906"/>
-<use xlink:href="#d" x="408.29991149902344"/>
-<use xlink:href="#c" x="436.0998992919922"/>
-<use xlink:href="#s" x="480.49989318847656"/>
-<use xlink:href="#s" x="530.4998779296875"/>
-<use xlink:href="#c" x="580.4998626708984"/>
-<use xlink:href="#x" x="624.8998565673828"/>
-<use xlink:href="#q" x="674.8998413085938"/>
+<use x="88.89999389648438" xlink:href="#n"/>
+<use x="161.0999755859375" xlink:href="#m"/>
+<use x="227.7999725341797" xlink:href="#XITS-20"/>
+<use x="252.79995727539062" xlink:href="#r"/>
+<use x="286.0999450683594" xlink:href="#o"/>
+<use x="336.0999298095703" xlink:href="#p"/>
+<use x="369.39991760253906" xlink:href="#g"/>
+<use x="408.29991149902344" xlink:href="#d"/>
+<use x="436.0998992919922" xlink:href="#c"/>
+<use x="480.49989318847656" xlink:href="#s"/>
+<use x="530.4998779296875" xlink:href="#s"/>
+<use x="580.4998626708984" xlink:href="#c"/>
+<use x="624.8998565673828" xlink:href="#x"/>
+<use x="674.8998413085938" xlink:href="#q"/>
 </g>
 <defs>
 <path id="an" d="m2.094 45v-3.2h8.206v-31.39c0-7.316-1.097-8.504-8.3-8.91v-1.5h26v1.5c-8.2 0.297-9.3 1.406-9.3 8.91v31.39h12.21v3.2h-12.21v11.59c0 5.91 1.8 8.91 5.6 8.91 2.2 0 3.5-1 5.29-3.91 1.61-2.68 2.82-3.59 4.5-3.59 2.41 0 4.21 1.8 4.21 4.09 0 3.61-4.39 6.21-10.39 6.21-6.32 0-11.5-2.71-14.11-7.21-2.6-4.5-3.39-8.09-3.5-16.09z"/>
 </defs>
 <g transform="translate(271.1 77.93) scale(.13 -.13)" fill="#ccb974">
 <use xlink:href="#ad"/>
-<use xlink:href="#n" x="88.89999389648438"/>
-<use xlink:href="#m" x="161.0999755859375"/>
-<use xlink:href="#XITS-20" x="227.7999725341797"/>
-<use xlink:href="#r" x="252.79995727539062"/>
-<use xlink:href="#g" x="286.0999450683594"/>
-<use xlink:href="#c" x="324.99993896484375"/>
-<use xlink:href="#d" x="369.3999328613281"/>
-<use xlink:href="#p" x="397.1999206542969"/>
-<use xlink:href="#h" x="430.4999084472656"/>
-<use xlink:href="#t" x="474.89990234375"/>
-<use xlink:href="#x" x="524.8998870849609"/>
-<use xlink:href="#p" x="574.8998718261719"/>
-<use xlink:href="#an" x="608.1998596191406"/>
-<use xlink:href="#l" x="641.4998474121094"/>
-<use xlink:href="#f" x="691.4998321533203"/>
-<use xlink:href="#w" x="724.7998199462891"/>
-<use xlink:href="#c" x="774.7998046875"/>
-<use xlink:href="#d" x="819.1997985839844"/>
-<use xlink:href="#q" x="846.9997863769531"/>
+<use x="88.89999389648438" xlink:href="#n"/>
+<use x="161.0999755859375" xlink:href="#m"/>
+<use x="227.7999725341797" xlink:href="#XITS-20"/>
+<use x="252.79995727539062" xlink:href="#r"/>
+<use x="286.0999450683594" xlink:href="#g"/>
+<use x="324.99993896484375" xlink:href="#c"/>
+<use x="369.3999328613281" xlink:href="#d"/>
+<use x="397.1999206542969" xlink:href="#p"/>
+<use x="430.4999084472656" xlink:href="#h"/>
+<use x="474.89990234375" xlink:href="#t"/>
+<use x="524.8998870849609" xlink:href="#x"/>
+<use x="574.8998718261719" xlink:href="#p"/>
+<use x="608.1998596191406" xlink:href="#an"/>
+<use x="641.4998474121094" xlink:href="#l"/>
+<use x="691.4998321533203" xlink:href="#f"/>
+<use x="724.7998199462891" xlink:href="#w"/>
+<use x="774.7998046875" xlink:href="#c"/>
+<use x="819.1997985839844" xlink:href="#d"/>
+<use x="846.9997863769531" xlink:href="#q"/>
 </g>
 <defs>
 <clipPath id="e">
-<rect width="424.6" height="155.2" x="55.37" y="14.04"/>
+<rect height="155.2" x="55.37" width="424.6" y="14.04"/>
 </clipPath>
 </defs>
 </svg>
