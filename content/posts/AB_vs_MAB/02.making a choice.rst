@@ -1,0 +1,147 @@
+:title: A/B testing and the multi-armed bandit
+:date: 2016-06-06 16:47 
+:category: Data processing
+:series: AB vs. MAB
+:series_index: 2
+:slug: AB-and-MAB
+:authors: Gaël
+
+
+A/B testing
+===========
+
+This is exactly why some methods, such as A/B testing 
+(`wiki <https://en.wikipedia.org/wiki/A/B_testing>`__), were devised:
+their only reason of being is to efficiently answer the question
+*is there actually a difference?*
+
+*How?* As explained above, A/B testing is a two-staged method…
+
+The *exploration stage* consists in providing each variant with the same
+probability. In our web optimisation case, this means that any given visitor
+has actually a :math:`50\%` chance of getting |orangeBtn| and a
+:math:`50\%` chance of getting |greenBtn|:
+
+.. figure:: {filename}/images/AB_exploration.svg
+
+    The exploration stage of the A/B testing method consists in providing
+    each variant with (almost) the same frequency: each visitor is as likely
+    to be given one variant or the other of the website.
+
+Providing each variant as often is not a requirement of the method *per se*,
+however we will see that this is a very efficient way to get the most
+significant data out of a finite sample.
+
+The *exploitation stage* is composed first of an actual test (called a
+contingency test in this case). The purpose of the test is to answer the
+question *is there actually a difference?* It does so by estimating what could
+be called a level of confidence:
+
+.. figure:: {filename}/images/AB_exploitation.svg
+
+    The exploitation stage of the A/B testing method starts with a statistical
+    test called a contingency test. The purpose of this test is to estimate
+    whether there is actually a difference or not. If there is, the best
+    performing variant is served to all the remaining visitors. If it is not,
+    one version can be chosen out of other considerations such as aestetics
+    or convenience or it can be chosen at random.
+
+
+
+In the specific dice-throwing case we presented above, there is 
+:math:`1` chance out of :math:`5` that we would be wrong in saying
+there is actually a difference. This proportion is an estimate of the level of
+confidence we have in that result.
+
+The multi-armed bandit method
+=============================
+
+The multi-armed bandit method was allegedly designed for only one
+purpose:
+
+    Maximizing the reward provided by the random process.
+
+The particular multi-armed bandit strategy presented in the original blog post
+mixes the exploration and exploitation stages:
+
+.. figure:: {filename}/images/MAB_expl.svg
+
+    In the multi-armed bandit method, the exploration and exploitation stages
+    are mixed: the conversion rate is updated each time a visitor comes to the
+    website. The variant yielding the best conversion rate is then favored: it
+    has a higher chance of being served. That imbalance is set as
+    :math:`\varepsilon` in the original blog post.
+
+The algorithm serves each variant with an equal probability
+:math:`1 - \varepsilon` of the time and it serves the best-performing variant
+:math:`\varepsilon` of the time (in the example above, 
+:math:`\varepsilon = 90\%`).
+
+This algorithm can conveniently be expressed conflating the two stages by
+defining the probability of serving the favoured event (i.e. currently best
+performing variant) and the disfavoured one:
+
+.. math:: P(\text{disfavoured}) = \frac{1 - \varepsilon}{\text{number of variants}}
+
+    \text{and}
+
+    P(\text{favoured}) = \varepsilon + P(\text{disfavoured})
+
+
+This is what is called the *set-and-forget* mode by the original blog author.
+
+As per the author suggestions, that method could be extended to include a
+contingency test. It could also be use in a similar fashion as A/B testing with
+a first stage consisting in the multi-armed bandit algorithm followed by a
+second stage of exploitation.
+
+Main differences between the methods
+====================================
+
+In practice, both methods could be used in the *two-stepped* mode and a
+contingency test can be performed in both.
+So what is the real core difference?
+
+    A/B testing serves each variant as often whereas the MAB strategy
+    favours one at any given time.
+
+This seemingly simple difference however has large implications as we are going
+to see.
+
+However, in contrast with a few claims of the original blog post:
+
+*  A/B testing is only a specific name given to a 2-variant **bucket
+   tests** (:math:`A` and :math:`B`, you guessed it). However nothing
+   prevents us from using it on more variants
+   (`Fisher's exact test <https://en.wikipedia.org/wiki/Fisher's_exact_test>`__
+   the contingency test for that kind of Bernoulli processes, can
+   be used on any number of variants or all the variants can be compared
+   2-by-2).
+*  Variants can be added or removed any time (provided the same amount of care).
+   In particular, A/B testing
+   does not *require* the variants to be served as often to work.
+   However, serving them as often at any given time is actually more
+   efficient and prevents a whole class of biases (I will come to that
+   later).
+
+Sample size
+===========
+
+Fisher's contingency test can be used to calculate the minimum sample size to
+be used in the exploration stage given a level of significance and a test
+power:
+
+*   The **level of significance** is the probability of *correctly* concluding that the
+    different variants (|orangebtn| and |greenBtn|) have no significant impact on
+    the outcome (conversion rate).
+*   The **power** is the probability of correctly concluding that the
+    different variants have an impact on the outcome.
+
+However we are going to see that this estimation is only trivially possible in
+the A/B testing framework.
+
+
+.. |greenBtn| image:: {filename}/images/green_btn.svg 
+    :align: middle
+.. |orangeBtn| image:: {filename}/images/orange_btn.svg
+    :align: middle

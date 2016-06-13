@@ -1,0 +1,299 @@
+:title: Challenging the claims and conclusion
+:date: 2016-06-13 14:58
+:category: Data processing
+:series: AB vs. MAB
+:series_index: 5
+:slug: challenging-conclusion
+:authors: Gaël
+
+Until now, I have spent time (and CPU power) to precisely illustrate
+what the two methods were designed for:
+
+-  A/B testing efficiently answers the question *is there a difference?*
+-  The MAB strategy provides the highest click-through rates over a
+   wider range of sample sizes.
+
+As their respective purposes are completely different, thinking of one
+of them as intrinsically better than the other is **nonsensical**,
+especially as we have shown that **each** method is clearly better than
+the other at what it was designed for. Therefore saying that one is
+always better than the other is saying that a screwdriver is always better 
+than a hammer: it makes absolutely no sense.
+
+In this last post, I want to talk more precisely about a few specific claims of
+the original blog post to show why I think they were made but also how they can
+be misleading and misunderstood.
+
+No, the multi-armed bandit strategy is not always better
+========================================================
+
+Let me quote the original blog post:
+
+    20 lines of code that will beat A/B testing every time
+    
+    A/B testing is used far too often, for something that performs so badly.
+    It is defective by design.
+
+The author seems to completely disregard the actual *testing* step in A/B
+testing. In particular, he never **ever** spoke about confidence, significance or
+power. As this is what A/B testing was designed for, I can easily understand
+that the trade-off made to achieve this level of guarantees seems "defective by
+design" to someone who don't care whether his results can be trusted or
+not.
+
+A second explaining element could be a slight misunderstanding
+of how a complete A/B testing campaign should be performed.
+He seems to think that the data-gathering stage should be as long as a 
+complete multi-armed bandit campaign (i.e. equal sample size, possibly in a 
+set-and-forget mode).
+Since the asymptotic behavior of the A/B testing data-gathering method is much
+worse than the one of the presented multi-armed bandit strategy, that seems
+like a huge mistake… The author is right! 
+That's why in A/B testing, a **sample size is 
+chosen** from the start depending on the guarantees we want to have in a fashion
+that the author actually **recommends** later in the post:
+
+    There are several variations of the epsilon-greedy strategy. 
+    In the epsilon-first strategy, you can explore :math:`100\%` of the time in 
+    the beginning and once you have a good sample, switch to pure-greedy.
+
+If you estimate that "good sample" size using the contingency test, this is a
+**precise and exact** description of what A/B testing is.
+
+*Wait a minute, so what is he comparing his multi-armed bandit algorithm to
+then?* By disregarding the actual testing and the effect of the sample size,
+he is actually comparing his algorithm twice 
+once at :math:`\varepsilon = 0\%` and once at :math:`\varepsilon = 90\%`.
+
+As a last comment, I have shown at length that the A/B testing data-gathering
+method (aka. 2-staged MAB at :math:`\varepsilon = 0\%`) does beat the
+multi-armed bandit method at higher :math:`\varepsilon` over a range of sample
+sizes.
+
+Yes, A/B testing can handle more than two options at once
+=========================================================
+
+Quote:
+
+    [MAB unlike AB testing] can reasonably handle more than two options at once.
+
+The blogger is correct there by definition: A/B testing is the two-option
+(called, you have guessed it, :math:`A` and :math:`B`) variant of what is 
+called *bucket testing*. So while the claim is semantically true, it is
+misleading: the method itself can handle as many variant as needed, the only
+difference is that it merely *changes names* when there are only two variants.
+
+In practice, because A/B testing is the presented multi-armed bandit 
+strategy at :math:`\varepsilon = 0\%` plus a contingency test, if one is
+capable of handling more than 2 options, the other should (except if the
+difference is in the test, which is not the case).
+
+As well, if removing or adding an option in an existing campaign is deemed safe
+in the presented multi-armed bandit strategy, it should be considered safe also
+in A/B testing because the contingency test does not require that each variant
+is provided as often.
+
+
+Yes, the MAB strategy does skew the results
+===========================================
+
+I completely share that impression with the author:
+
+    Statistics are hard for most people to understand.
+
+One thing that people seem to have a hard time to understand is that if you
+change your sampling behaviour depending on the data gathered so far, it is
+highly probable that you are going to introduce a bias that will skew your
+data.
+
+Back to the original blog post, the blogger claimed:
+
+    Showing the different options at different rates will skew the
+    results. (No it won't. You always have an estimate of the click
+    through rate for each choice)
+
+That claim is rather strange: having data does not mean these data are
+not skewed and of course showing different options at different rate
+won't (usually) skew the results… however, as I said, changing these
+rates **according** to the measurements most likely will…
+
+So how can I prove that? I already gave an hint earlier in the series in
+that figure:
+
+.. figure:: {filename}/images/difference_vs_sample_size.svg?
+
+   Difference in click-through rates vs. the sample size for both methods.
+
+As I said at the time, there seems to be a remaining difference at
+higher sample sizes but it is not obvious and really small.
+I can plot the corresponding distribution of values at a given sample size:
+
+.. figure:: {filename}/images/dist_difference_vs_sample_size.svg?
+
+    Distribution of the difference in click-through rate between the two
+    variants :math:`A` (orange) and :math:`B` (green button) at a sample
+    size of :math:`5000`.
+    They are almost Gaussian-shaped which confirms that we were allowed to
+    calculate the arithmetic mean and represent it in the figure above.
+    The real (and hidden) click-through rate are different (:math:`5\%`).
+
+and the same conclusion as above applies: **if** there is a skew, it is not
+really visible. The two distributions are centered on :math:`5\%` and
+roughly Gaussian-shaped.
+
+But let's try again in a situation where the algorithm is more likely
+to switch more often. It would do so by using the data gathered until then
+and if there is a skew in the distribution, it should be far more visible that
+way:
+
+.. figure:: {filename}/images/dist_zero_difference_vs_sample_size.svg?
+
+    Distribution of the difference in click-through rate between the two
+    variants :math:`A` (orange) and :math:`B` (green button) at a sample
+    size of :math:`5000`. The real (and hidden) click-through rates are
+    equal.
+
+And here we are: the depression at :math:`0\%` should not exist. This proves
+that the data is skewed by the method. I could also calculate the difference between
+the favoured and disfavoured variant in both methods:
+
+
+.. figure:: {filename}/images/abs_dist_zero_difference_vs_sample_size.svg?
+
+    Distribution of the difference in click-through rate between the
+    favoured and the disfavoured
+    variants at a sample
+    size of :math:`5000`. The real (and hidden) click-through rates are
+    equal.
+
+
+We can observe that:
+
+-  in the case of A/B testing, the distribution is a half of a Gaussian
+   with its maximal value reached at :math:`0\%`, as expected;
+-  in the case of the MAB strategy, the distribution is not Gaussian
+   anymore and the maximal value is reach at :math:`0.4\%`.
+
+This is an issue for two reasons:
+
+1. Actually the individual click-through rate distributions are skewed
+   too, which basically means that we **cannot trust** any contingency test
+   performed on the data gathered using that strategy.
+2. There is no way to know whether a given difference is **actually** a
+   difference.
+
+So, not only is the correct estimation of a minimal sample size already a
+challenge using the presented multi-armed bandit algorithm, testing these
+results would also be very challenging because the method itself introduces a
+difference that is not accounted for in the testing.
+
+No test, no confidence: no conclusion?
+======================================
+
+Most people seem to forget completely about the test part of A/B
+**testing**. The reasoning here, as seen elsewhere, is that whether or
+not the test is positive, what appears to be the best-performing variant
+would be used anyway. Therefore the test itself is useless; A/B testing
+itself is useless; A/B testing can be replaced with something providing
+higher click-through rates.
+
+But the actual *test* in A/B testing is actually intended as a feedback,
+a way to **estimate** your confidence in the results you obtained and
+make decisions with both pieces of informations. In contrast, the MAB
+strategy seems to be used far more often relying on one's "good luck":
+it is **assumed** that the population is large enough to eventually
+provide meaningful results and the problem is precisely that this is
+**usually** true.
+
+Think of a successful campaign as a light bubble. When you switch it on,
+you expect to get light and this is what **usually** happens. The MAB
+strategy is like saying "let's ask a blind person to turn that light on:
+he will move more easily in the dark, in that sense he will be more
+efficient for the job". On the other hand, the A/B testing method would
+be more like saying "let's ask a sighted person to switch it on because
+he needs to know whether he was successful and report back". Yes, in
+most cases, the light will be on anyway! However, there is no way to
+detect that the light did not turn on for whatever reason in the MAB
+strategy.
+
+Mind you, the final and allegedly real results given in the original
+blog post do not even pass the contingency test (the minimal
+:math:`p`-values is only :math:`0.25`). So strictly speaking, his
+conclusions are questionable, especially given that the MAB strategy is
+known to introduce such a difference.
+
+Conclusion
+==========
+
+Other drawbacks
+---------------
+
+There are a few moot points that I did not evoke such as the effect of
+time-varying click-through rates, the effect of the lack of
+equally-sampled control group, the implications of the actual overlap of
+the click-through rate distributions depending on the method used, the
+relative spread of the distributions, etc. I decided not to include them
+because the most disastrous outcomes would require stringent (albeit not
+that rare) requirements. I did not want to weaken the whole series
+because some would dismiss these arguments saying "what are the odds?".
+
+
+Of hammers and screwdrivers
+---------------------------
+
+As surprising as it may appear, A/B testing and the multi-armed bandit
+strategy were designed for two completely different purposes:
+
+-  The purpose of A/B testing is to determine whether or not there is a
+   difference and provide that answer (with the uncertainties) through a
+   statistical test.
+-  The purpose of the multi-armed bandit strategy is to maximize the
+   reward over a large range of sample sizes. Usually it can (and
+   rigorously should) be used in a set-and-forget mode.
+
+These methods are just like a hammer and a screwdriver: both can be used
+to do nearly the same thing, yet cannot really be freely swapped.
+
+When should I choose A/B testing?
+---------------------------------
+
+-  When you need to really determine which variant is better (e.g. drug
+   trials).
+-  When you need to estimate the difference precisely, without bias (e.g. multivariate
+   analysis).
+-  When you need the shortest testing period possible for a given
+   confidence in the results.
+-  When you need to know the uncertainties on the results.
+-  When you need to assess that there is actually no difference.
+
+When should I use the MAB strategy?
+-----------------------------------
+
+-  When being sometimes wrong without any indication of it is not that
+   important.
+-  When you cannot setup an optimal A/B testing campaign because you
+   lack too much information (minimum population size, estimate of the
+   difference, etc.).
+
+The End?
+--------
+
+What this post series lacks (as most posts out there) are references: I
+am pretty sure that all this work and far far more has already been done
+by people out there. Though I cannot personally recommend it (as I have
+not read it), I know there is a short `O'Reilly
+book <http://shop.oreilly.com/product/0636920027393.do?sortby=publicationDate>`__
+on the subject of bandit algorithms in general. I also know that there
+are a lot of references in Google scholar about both methods.
+
+Literature scanning is not just for scientist: it is necessary to
+efficiently reuse the knowledge humankind already gathered on the
+subject in order to eventually avoid the traps, pitfalls and
+inefficiencies caused by starting from scratch. I am sure a lot of great
+minds already worked on this, this is what you should read, not some
+random blog posts on the internet if you really want to do things
+correctly.
+
+As far as this blog is concerned, it just started out as a few tests and
+it is mainly intended to show once again that the world is not just
+black and white.

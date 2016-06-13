@@ -1,0 +1,317 @@
+:title: Reward maximisation
+:date: 2016-06-10 16:17
+:category: Data processing
+:series: AB vs. MAB
+:series_index: 4
+:slug: reward-maximisation
+:authors: Gaël
+
+
+Effect of the sample size
+=========================
+
+I showed in the previous section that the A/B testing data-gathering
+method by itself has some advantages over the multi-armed bandit strategy.
+
+But how does this translates to *what really matters*, clicks?
+
+I first simulated a large number of complete campaigns (i.e. exploration
+stage followed by an exploitation stage using the testing results).
+Each time, I could get the total number of clicks yielded in our simulated
+website lifetime. However the total number of click is not that convenient:
+the simulated population in that particular example was composed of 
+:math:`20000` visitors. But what if I chose a different size? The total number
+of clicks would not be directly comparable. That is why I decided to calculate
+the (simulated) total click-through rate: the number of clicks divided by the
+number of visitors.
+
+In this particular example, I used the two-stepped variant of
+the multi-armed bandit strategy provided that the set-and-forget mode is 
+reached when the sample size is equal to the population size. I obtained the
+following figure:
+
+.. figure:: {filename}/images/clicks_vs_sample_size.svg?
+
+    The total number of click was calculated for different sample sizes
+    (in a population of :math:`20000` visitors). Both methods were applied on
+    those samples only. The best-performing variant was served to all the
+    remaining visitors. Each time, the overall number of clicks was calculated
+    and divided by the population size. The *set-and-forget* mode is achieved
+    when the sample size equals the population size.
+
+    :math:`P(O|A)`: (hidden) real click-through rate of the :math:`A` 
+    (|orangeBtn|) website variant used as an input in the simulation.
+
+    :math:`P(O|B)`: (hidden) real click-through rate of the :math:`B` 
+    (|greenBtn|) website variant used as an input in the simulation.
+
+
+-  We can see that in both the 2-staged cases the total click-through rate rises 
+   quickly at smaller
+   sample sizes (left of the figure), yet A/B testing systematically
+   yield higher click rates in that part of the figure. This is a direct
+   consequence of what we showed earlier: A/B testing requires fewer trials to
+   reach a given confidence.
+-  A maximum is then reached in both methods: that maximum is reached
+   at smaller sample sizes in the A/B testing framework.
+-  Finally, the total click rate decreases linearly toward the final
+   value in each case (which corresponds to the set-and-forget
+   scenario). In A/B testing, it is roughly the arithmetic mean of the
+   individual click rates while in the multi-armed bandit strategy, it
+   is a weighted mean.
+
+But let's zoom-in a little bit to talk about the domain of superiority of each
+methods.
+
+Domains of superiority
+======================
+
+Here is a close-up of the previous figure:
+
+.. figure:: {filename}/images/closer_clicks_vs_sample_size.svg?
+
+    Close-up of the previous figure. There are 3 domains of superiority:
+    first the multi-armed bandit method used in the set-and-forget mode,
+    then A/B testing, then the two-staged multi-armed bandit strategy
+    (i.e. the strategy is used only on a limited sample and the best variant
+    is then served to all the remaining visitors).
+
+    :math:`P(O|A)`: (hidden) real click-through rate of the :math:`A` 
+    (|orangeBtn|) website variant used as an input in the simulation.
+
+    :math:`P(O|B)`: (hidden) real click-through rate of the :math:`B` 
+    (|greenBtn|) website variant used as an input in the simulation.
+
+This illustrates the fact that a properly designed A/B testing campaign can
+beat the multi-armed bandit strategy on its own grounds: maximizing the reward.
+As it turned out, saying that this multi-armed bandit strategy was designed to
+maximize the reward is not rigorously correct: A/B testing seems to be able to 
+provide just as many clicks if carefully setup. What the multi-armed bandit 
+strategy is really good at instead is *maintaining a high click-through rate over
+a large period of time*.
+
+But you could rightfully argue that these results are really local: what if we
+used another population size instead? or another :math:`\varepsilon`?
+or other hidden click-through rates? *etc*. Would the A/B testing
+data-gathering strategy still perform well? In what circumstances? This is why
+I am going to calculate the same kind 
+
+Population size
+===============
+
+In the example above, the sample size was chosen equal to :math:`20000`.
+But what would happen to the total click-through rate if that population
+size was different?
+
+I performed the exact same kind of Monte-Carlo simulation as above. 
+But this time,
+I decided to represent the difference in overall click-through rates: by using
+a convenient colour scheme, we can directly see which algorithm yielded the
+highest total click-through rate (and therefore the greatest number of clicks)
+given a population size, a sample size, an :math:`\varepsilon` for a given
+hidden truth:
+
+.. figure:: {filename}/images/diff_vs_sample_size_vs_tot.svg?
+
+    Difference in the total click-through rates calculated in the **2-staged mode**
+    for both A/B testing and the multi-armed bandit data gathering strategies.
+    For each population size, there is a range of sample sizes where the A/B
+    testing data-gathering strategy performs as well or better on average 
+    than the multi-armd bandit strategy. At their respective peak, both methods
+    reach roughly the same maximal value.
+
+    Blue patches: A/B testing provides roughly significantly better
+    click-through rates on average, in these conditions.
+    
+    Green patches: the multi-armed bandit strategy in its two-staged mode
+    provides roughly significantly better click-through rates.
+
+    White patches: the difference on average is not significant.
+
+It appears clearly that A/B testing is systematically better at lower
+sample sizes. As the population increases, the range of sample sizes in
+which A/B testing performs better becomes wider. Though not represented
+on the figure, the difference in the maximum click-through rate between
+the methods is negligible. This means that A/B testing can
+systematically reach the same number of clicks as the other strategy.
+Conversely, that two-staged multi-armed bandit strategy can systematically
+reach the same number of clicks as A/B testing.
+
+This can be explained by the asymptotic behaviour of the two methods as
+illustrated previously: as the population size increases, the worse-case
+scenario (i.e. the set-and-forget mode where all the time is spent in
+the exploration stage) is reached at higher and higher sample sizes resulting
+in a much gentler slope in both methods. However, as the slope in the
+A/B testing method was much steeper to begin with, the improvement is
+more visible there, resulting in a wider range of superiority.
+
+Set-and-forget vs. two-staged
+=============================
+
+You could wonder why we compared the A/B testing data-gathering method
+with a two-staged multi-armed bandit strategy and not its set-and-forget
+variant:
+
+.. figure:: {filename}/images/diff_vs_sample_size_vs_tot_forget.svg?
+
+    Difference in total click-through rates obtained using the two-staged
+    A/B testing data-gathering method vs. the multi-armed bandit strategy in
+    its **set-and-forget mode**.
+    The superiority range of the A/B testing strategy is much wider: the
+    set-and-forget mode performs worse than the two-staged one.
+    The sample size is defined for A/B testing only: the multi-armed bandit
+    being used in the set-and-forget mode, its sample size corresponds to the
+    whole population size.
+
+The first reason is that in spite of its being far more complicated to setup,
+the two-staged mode yields greater click-through rates on a wider range of
+sample sizes. So the two-staged mode could be considered better-performing
+than the set-and-forget mode.
+
+The second reason is that a pure set-and-forget mode does not seem desirable in
+practice in most cases: do you really want to provide each variant you ever
+wanted to test for the whole life of your website? Most certainly not: at some
+point you would stop and only provide whichever variant you choose.
+
+Once again, we see that the multi-armed bandit strategy is getting further and
+further away from being *always* (or even *generally*) better than A/B testing
+considering what really counts for a business getting its money from clicks:
+the overall click-through rate.
+
+
+MAB asymmetry
+=============
+
+As I have explained earlier, the core of the MAB strategy consists in
+favouring the best-performing variant to keep on testing while gathering more
+clicks. The magnitude of that imbalance is
+quantified by a variable called :math:`\varepsilon` (the Greek letter
+"epsilon"). 
+
+For instance, when :math:`\varepsilon = 0\%`, the MAB strategy favours the
+seemingly best-performing variant by :math:`0\%`: this is equivalent to
+a proper A/B testing data-gathering strategy (no variant is actually ever 
+favored). When :math:`\varepsilon = 100\%`, the algorithm is trapped:
+whichever variant was found the best at the very first step will be the only 
+one served ever.
+
+.. figure:: {filename}/images/epsilon_vs_sample_size_vs_tot.svg?
+
+    The overall click-through rate as a function of the sample size
+    and :math:`\varepsilon`, the magnitude by which seemingly best variant
+    at some point is favoured (i.e. presented more often).
+
+At :math:`\varepsilon = 0\%`, no strategy is really favoured: this was
+expected as they are strictly equivalent.
+
+Then as :math:`\varepsilon` increases, the difference between the strategies
+becomes more and more apparent (the patches become darker and darker).
+
+Regarding the ranges of superiority: it is at it's widest for the
+multi-armed bandit strategy around :math:`50\%`. As :math:`\varepsilon`
+goes away from that value, the A/B testing data-gathering strategy seems
+to be better. 
+
+*Is that :math:`\varepsilon = 50\%` value always the same as other parameters
+vary?* I don't know, and if I had to guess I would say *no*. 
+However the existence of such a parameter maximizing the
+range of superiority of the multi-armed bandit strategy seems guaranteed:
+
+*   at low :math:`\varepsilon`, the two strategy are practically equivalent; 
+*   at intermediary :math:`\varepsilon`, there is a sample size beyond which 
+    both strategy will be mostly correct yet the multi-armed bandit method 
+    does so while favouring one (which should mostly be the best);
+*   at high :math:`\varepsilon`, the multi-armed bandit method has fewer
+    and fewer opportunities to estimate the click-through rate and
+    can be trapped in a non-optimal setup for quite some time.
+
+
+
+Offset in the (hidden) click-through rate
+=========================================
+
+Until now, I have basically always defined one click-through rate at
+:math:`10\%` and the other at :math:`15\%` (corresponding to a
+difference of :math:`15 - 10 = 5\%`).
+We could wonder whether offsetting these two values upward 
+(while keeping the difference constant) would change
+anything in the range of superiority of both our data-gathering strategies:
+
+.. figure:: {filename}/images/POXorig_vs_sample_size_vs_tot.svg?
+
+    Effect of offsetting both the real (and hidden) click-through rate
+    values: the range of superiority of the A/B testing data-gathering strategy
+    is maximized for values centered around :math:`50\%` (which corresponds to
+    an offset of :math:`\sim 35\%`).
+
+It appears very clearly that the largest range of A/B testing data-gathering
+superiority is obtained for an offset of :math:`\sim 35\%`: this
+corresponds to the actual click-through rates :math:`45\%` and
+:math:`60\%`, i.e. almost centered on :math:`50\%`.
+
+This result is actually caused by a change in the relative power of the
+two data-gathering strategies: when the click-through rates are around
+:math:`50\%`, the A/B testing method finds the correct variant even
+faster than in other cases. At the same time, the multi-armed bandit strategy
+does not really benefits from this because it is generally going to
+favour one variant at the expense of the others, thus not visibly increasing
+its power as quickly.
+
+Difference in click-through rates
+=================================
+
+The last parameter I wanted to study is the difference itself between
+the click-through rates. This is what I represented in the following
+figure (the :math:`{\Delta}P(O|X)` notation represents this difference):
+
+.. figure:: {filename}/images/POXdiff_vs_sample_size_vs_tot.svg?
+
+    Effect of the difference in click-through rate on the overall observed
+    click-through rate. The bigger the difference, the widest the range of
+    superiority of the multi-armed bandit strategy.
+
+It appears clearly that the multi-armed bandit strategy has the widest range of
+superiority (i.e. greater number of clicks over a broader sample size range)
+as the difference increases.
+
+Yet A/B testing does not become irrelevant: as the difference gets bigger, one
+needs far smaller sample sizes to get relevant information. This means that the
+blue patches (showing the superiority range of the A/B testing data-gathering 
+strategy) should still be there but at even smaller sample sizes than the
+minimum of :math:`80` samples that we represented here.
+
+
+Summary: what is the MAB strategy good at?
+==========================================
+
+In practice, saying that this particular implementation of the
+multi-armed bandit strategy has been developed to maximise the number of
+clicks appears misleading. This is **not** what it does. What it was
+actually designed for (and does very well) is keeping that total number
+of clicks very high in a larger range of samples sizes. See the difference?
+
+This is why the multi-armed bandit strategy can be used in a set-and-forget
+mode. This is also why we observe such a wide superiority range as the
+difference in click-through rate increases. And yet this is why there is always
+a range of sample sizes in which the A/B testing strategy will be as good on 
+average.
+
+The multi-armed bandit method is also quite good at doing damage control
+in poorly set up data-gathering campaigns. Such a campaign requires that you
+set the minimum difference to be found. The sample size is then calculated
+depending on this difference threshold. If you expected a difference of
+:math:`1\%` but actually got a difference of :math:`50\%`, chances are high
+that you spent far too much time in the exploration stage for the A/B testing
+data-gathering strategy to be competitive. In the same setup, the multi-armed
+bandit strategy would quickly favour the best variant and avoid such a loss.
+
+*Does that make the multi-armed bandit method the way to go for web
+optimisation?* Not necessarily: the next (and last) post of the series
+is dedicated to giving elements to answer that question.
+
+
+.. |greenBtn| image:: {filename}/images/green_btn.svg 
+    :align: middle
+.. |orangeBtn| image:: {filename}/images/orange_btn.svg
+    :align: middle
+

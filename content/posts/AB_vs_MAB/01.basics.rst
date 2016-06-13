@@ -1,0 +1,198 @@
+:title: Basics of testing for web optimisation
+:date: 2016-05-12 12:26 
+:category: Data processing
+:series: AB vs. MAB
+:series_index: 1
+:slug: basics
+:authors: Gaël
+
+I recently stumbled across a `reddit link <https://redd.it/4dlioz>`__ to
+a (now 3-year-old) blog post presenting a multi-armed bandit strategy
+claimed to maximize the click-through rate even during the
+data-gathering stage of the optimization process.
+
+That original blog post was rather disappointing: many bold claims with
+very little or no data, demonstrations nor references to support them.
+Yet most of the claims are exceptional and therefore require exceptional
+proofs. For instance (emphasis is mine):
+
+    20 lines of code that will beat A/B testing **every time**
+
+    A/B testing is used **far too often**, for something that performs
+    **so badly**
+
+    you can **always** do better than A/B testing -- sometimes, **two or
+    three times** better
+
+That post really piqued my curiosity and I started my own Monte-Carlo
+simulations wondering *when* these claims would be wrong.
+This is what I am about to present in this series of posts.
+
+.. PELICAN_END_SUMMARY
+
+
+Choosing the best option
+========================
+
+Have you ever been given a choice that you found very hard to make?
+
+Whether you don't like the outcomes or just *don't know* what they are bound to
+be, some decisions are tough to make. 
+Yet, there are ways to estimate what the outcomes would be
+by resorting to pure intuition, common sense, existing knowledge, experiments
+or even fancy mathematical models.
+
+The web-service realm is full of tough choices like this.
+*Should I place the image on the left or on the right of the website? Should I
+stack the navigation bar buttons horizontally or vertically? Should I colourise
+that button in orange or green?* etc.
+
+Website optimisation
+====================
+
+*Is that a joke?* could you ingenuously say...
+
+Well, did you know that a simple `cup colour could change the way you taste
+chocolate <http://dx.doi.org/10.1111/j.1745-459X.2012.00397.x>`__?
+In a similar manner, even a seemingly trifling alteration (like a change of colour)
+*could* have a significant impact on the user behaviour on your website and
+consequently on what usually counts: the sales.
+
+Changing the semantics, presentation and behaviour of a website 
+to favour a particular set of user  behaviours 
+is what is usually called *website optimisation*. That optimisation
+can be performed using pure intuition, common sense, existing knowledge,
+*etc*. However, some tools have been available for a while to make our
+decisions out of real-world data and modelling (e.g. statistics).
+
+Of time machines
+================
+
+
+
+.. figure:: {filename}/images/time_machine.svg
+    :align: left
+
+Now if we think about it, what should we do to to figure out which variant
+would provide the greatest number of clicks among our visitors without ever 
+being wrong?
+
+For instance, let's say we have two variants of the same website with an orange and a
+green *Buy Now!* button, respectively. We would like to determine which button
+would yield the greatest conversion/click-through rate (i.e. the greatest number
+of clicks divided by the number of visitors). How can we do this without making
+**any** assumptions and be correct each time? I am afraid we would have to rely
+on our beloved *time machine*:
+
+.. figure:: {filename}/images/choice.svg
+
+    The only way to guarantee "if we use that variant we will specifically
+    get a conversion (or click-through) rate of :math:`P(\text{clicks}|\text{event}) = X\%`" is to perform the 
+    measurement in different timelines on the entire population (i.e. **all**
+    the visitors of the website) using a time machine.
+
+Obviously, with such a machine, it would be possible to increase even more the
+number of clicks by providing each user with a variant that we know will result
+in a click. But that's a bit beyond the point here.
+
+
+Of statistics
+=============
+
+Unfortunately, time machines are illegal (they break a handful of physical
+laws and trust me, you don't want to meddle with Laplace demons). So what can
+we do? We could begin by making a few simplifying assumptions about the world
+and human beings in general:
+
+1. The click-through rate exists.
+2. It has a definite value that is an intrinsic property of human beings.
+3. That value depends on factors such as the button colour.
+4. Factors other than the button colour (i.e. uncontrolled factors here) 
+   are randomised and their effect on the click-through rate is supposed 
+   to be random.
+5. Large random fluctuations are less probable than small ones.
+
+By making these assumptions, we can devise a perfectly legal method to estimate
+the click-through rate: given an infinite population, a subpart of it should be
+given the first variant (|orangeBtn|) and the rest should be given the second
+variant (|greenBtn|). The click-through rate would be estimated by dividing the
+number of clicks given a specific variant by the number of impressions of that
+variant!
+
+
+Sampling
+========
+
+However, there is no such thing as an infinite number of visitors.
+So what would happen if we were only given a finite
+**sample** of the supposedly infinite population of our visitors-to-be?
+We would be subjected to a dreadful situation: *we could be wrong*. 
+Alas! We could determine that one variant performs better while it does not!
+Sampling is the original sin of probabilities, the one that could cause our
+downfall.
+
+This is all the more frustrating that a finite number of visitors also has
+another insidious effect: if we "spend" all these visitors to determine the
+best variant, what should we do with it? No one is there left to be served that
+click-enhancing variant. This is why web optimisation is often split into two
+stages:
+
+1.  An **exploration** stage where all the variants are provided to estimate the
+    respective click-through rate of each of them:
+
+    .. figure:: {filename}/images/exploration.svg
+
+        The exploration stage consists in estimating the click-through
+        rate on a limited number of visitors. This estimate
+        :math:`\tilde{P}(\text{clicks}|\text{event})` can then be used to
+        determine which variant should be served to the rest of the visitors.
+        The population here is already a finite group of people: the website
+        visitors.
+
+2.  An **exploitation** stage where the best-performing variant (the one
+    yielding the greatest number of clicks) is always served:
+
+    .. figure:: {filename}/images/exploitation.svg
+
+        The exploitation stage consists in providing the variant which exhibited
+        the greatest click-through rate in the former exploration stage.
+
+These stages summarise nicely why we did all of this in the first place:
+gaining knowledge (exploration) in order to maximize the reward (the number of
+clicks in the exploitation stage).
+
+The devil's tail
+================
+
+*Problem solved!* you said? Hell no! The devil's in the details: as we said,
+the real click-through rate for each variant is hidden by random fluctuations
+and these fluctuations are the reason why we could be wrong: determining
+whether a difference can be attributed to random variations alone is very
+complex.
+
+Let's see… Imagine that we are throwing a 6-sided dice :math:`1000` times. We count
+the number of time any given side has showed up. Once this is done, we can
+calculate how often a given side showed up by dividing that count by the total
+number of throws. According to assumptions similar to the ones we made above,
+these frequencies are actually estimates of the hidden truth: the actual
+probability that any side shows up. We obtained the following values:
+
+.. figure:: {filename}/images/dice.svg
+
+    This is the *distribution* of the frequencies we obtained for each side of
+    a 6-sided dice by throwing it :math:`1000` times. The value :math:`1/6` should be
+    reached for a perfectly fair dice.
+
+**But is that dice actualy fair?** The frequency/probability values alone are **not** enough
+to answer that question: what is "too much" of a difference to be attributed to
+random fluctuations alone? 
+can the fairness of the dice really be questioned from these data?
+
+This is the whole point of testing. Similarly, we could ask whether 
+my |orangeBtn| variant really performing better than my |greenBtn| variant?
+
+
+.. |greenBtn| image:: {filename}/images/green_btn.svg 
+    :align: middle
+.. |orangeBtn| image:: {filename}/images/orange_btn.svg
+    :align: middle
